@@ -6,4 +6,4 @@
 >browse( chrome , firefox ) , mobile ( android , ios)  
 
 
-- [AUCTION logo](http://eventimg.auction.co.kr/md/auction/08405BF42E/auction_type30.svg)
+- [AUCTION logo Animation](http://eventimg.auction.co.kr/md/auction/08405BF42E/auction_type30.svg)
