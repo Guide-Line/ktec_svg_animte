@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>AUCTION LOGO</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- Reset CSS -->
+	<link rel="stylesheet" href="http://eventimg.auction.co.kr/md/auction/08405BF42E/promotion.init.css">
+    <link rel="stylesheet" href="http://eventimg.auction.co.kr/md/auction/08405BF42E/idangerous.swiper.css">
+	<!-- Custom CSS -->
+	<style type="text/css">
+        svg {
+
+            width:100%;
+            height:100%;
+
+            background-color: #FFFFFF;
+        }
+    
+    </style>
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
+    <script src="http://eventimg.auction.co.kr/md/auction/08405BF42E/idangerous.swiper.js"></script>
+	<!-- Common Promotion Script -->
+	<script src="http://eventimg.auction.co.kr/md/auction/08405BF42E/promotion.iac.js"></script>
+	<!-- Custom Script -->
+	<script type="text/javascript"></script>	
+</head>
+<body>
+    <script src="http://eventimg.auction.co.kr/md/auction/09D730FD87/snap.svg-min.js"></script>
+    <script src="http://eventimg.auction.co.kr/md/auction/09D730FD87/SnapSVGAnimator.min.js"></script>
+
+    <script type="text/javascript">
+        
+        //http://eventimg.auction.co.kr/md/auction/09D730FD87/auction.json
+        
+        
+        var jsonfile = 'auction.json'
+        var fps = 80,
+            width = 550,
+            height = 400,
+            AJAX_req;
+
+       /* AJAX_JSON_Req(jsonfile);
+
+        function handle_AJAX_Complete() {
+            if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
+                json = JSON.parse(AJAX_req.responseText);
+                comp = new SVGAnim(
+                    json,
+                    width,
+                    height,
+                    fps
+                );
+                console.log(comp)
+            }            
+        }
+
+        function AJAX_JSON_Req(url) {
+            AJAX_req = new XMLHttpRequest();
+            AJAX_req.open("GET", url, true);
+            AJAX_req.setRequestHeader("Content-type", "application/json");
+            AJAX_req.onreadystatechange = handle_AJAX_Complete;
+            AJAX_req.send();
+        }*/
+        
+        var container = document.getElementById("abc");        
+        var comp = new SVGAnim(jsonfile, width,height,fps); 
+        console.log(comp)
+        container.appendChild(comp.s.node); 
+      
+    </script>
+  
+   <div id="abc"></div>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        svg {
+            
+            width:100%;
+            height:100%;
+            
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="http://eventimg.auction.co.kr/md/auction/09D730FD87/snap.svg-min.js"></script>
+    <script src="http://eventimg.auction.co.kr/md/auction/09D730FD87/SnapSVGAnimator.min.js"></script>
+
+    <script type="text/javascript">
+        var jsonfile = "http://event.gmarket.co.kr/html/Gmkt_EC/2017/12/1214_sm/auction.json",
+            fps = 80,
+            width = 550,
+            height = 400,
+            AJAX_req;
+
+        AJAX_JSON_Req(jsonfile);
+
+        function handle_AJAX_Complete() {
+            if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
+                json = JSON.parse(AJAX_req.responseText);
+                comp = new SVGAnim(
+                    json,
+                    width,
+                    height,
+                    fps
+                );
+            }
+        }
+
+        function AJAX_JSON_Req(url) {
+            AJAX_req = new XMLHttpRequest();
+            AJAX_req.open("GET", url, true);
+            AJAX_req.setRequestHeader("Content-type", "application/json");
+
+            AJAX_req.onreadystatechange = handle_AJAX_Complete;
+            AJAX_req.send();
+        }
+    </script>
+    
+    
+    
+</body>
+
+</html>
